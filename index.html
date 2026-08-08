@@ -1,96 +1,406 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahana Rosemary | Sports Coach & Manager</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f8fc;
+        }
+
+        header {
+            background: linear-gradient(135deg, #063b72, #087f8c);
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 8%;
+            background: linear-gradient(
+                rgba(0, 50, 100, 0.85),
+                rgba(0, 100, 120, 0.85)
+            );
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: #ffd700;
+            color: #063b72;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #063b72;
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card h3 {
+            color: #087f8c;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .schedule {
+            background: #eaf3f8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #063b72;
+            color: white;
+        }
+
+        .contact {
+            background: #063b72;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact-info {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+        }
+
+        footer {
+            background: #03294f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">AHANA ROSEMARY</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#sports">Sports</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Ahana Rosemary</h1>
+        <h2>Sports Coach & Manager</h2>
+
+        <p>
+            Passionate about developing sporting talent, building discipline,
+            teamwork and creating opportunities for young athletes to succeed.
+        </p>
+
+        <a href="#about" class="btn">Explore My Portfolio</a>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+        <p>
+            I am a passionate sports coach and manager dedicated to helping
+            young athletes discover their talents and develop their skills.
+            My approach combines professional training, discipline,
+            teamwork, confidence and positive character development.
+        </p>
+
+        <br>
+
+        <p>
+            Through structured training and mentorship, I aim to create an
+            environment where athletes can grow both on and off the field.
+        </p>
+    </div>
+</section>
+
+<section id="services">
+    <h2 class="section-title">My Services</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <h3>Sports Coaching</h3>
+            <p>
+                Professional training programs designed to improve
+                athletic skills and performance.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>Sports Management</h3>
+            <p>
+                Organizing training programs, competitions and
+                athlete development activities.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💪</div>
+            <h3>Fitness Training</h3>
+            <p>
+                Fitness and conditioning programs that improve
+                strength, flexibility and endurance.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Talent Development</h3>
+            <p>
+                Helping young athletes identify their strengths
+                and build confidence through sport.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="sports">
+    <h2 class="section-title">Sports Activities</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">⚽</div>
+            <h3>Football</h3>
+            <p>Technical skills, teamwork, fitness and match preparation.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏀</div>
+            <h3>Basketball</h3>
+            <p>Ball handling, shooting, teamwork and game strategies.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎾</div>
+            <h3>Long Tennis</h3>
+            <p>Racket skills, movement, coordination and match practice.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏃</div>
+            <h3>Aerobics</h3>
+            <p>Fitness activities focused on endurance, movement and health.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="schedule" id="schedule">
+    <h2 class="section-title">Training Schedule</h2>
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Activity</th>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>4:00 PM – 6:00 PM</td>
+            <td>Sports Training</td>
+        </tr>
+
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM – 12:00 PM</td>
+            <td>Sports Training & Fitness</td>
+        </tr>
+    </table>
+</section>
+
+<section id="contact" class="contact">
+    <h2 class="section-title">Let's Work Together</h2>
+
+    <div class="contact-info">
+        <p>📧 <strong>Email:</strong> ahanatochukwu22@gmail.com</p>
+
+        <p>📞 <strong>Phone:</strong> 07066338336</p>
+
+        <p>
+            📍 <strong>Location:</strong>
+            2nd Avenue, 201 Road D, close to Loral International
+        </p>
+
+        <br>
+
+        <a href="mailto:ahanatochukwu22@gmail.com" class="btn">
+            Send Me an Email
+        </a>
+    </div>
+</section>
+
+<footer>
     <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
-</html>
+        © 2026 Ahana Rosemary | Sports Coach & Manager
